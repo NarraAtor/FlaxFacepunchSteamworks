@@ -104,6 +104,7 @@ public class FacepunchSteamworksPlugin : GamePlugin
         try
         {
             SteamClient.Init(_settings.AppId, false);
+            SteamNetworkingUtils.InitRelayNetworkAccess();
         }
         catch (Exception e)
         {

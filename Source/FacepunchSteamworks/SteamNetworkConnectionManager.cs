@@ -15,8 +15,21 @@ public class SteamNetworkConnectionManager : ConnectionManager
 
     public event Action<NetworkEventType, ulong, byte[]> NetworkEvent;
 
+    public override void OnConnecting(ConnectionInfo info)
+    {
+        FlaxEngine.Debug.Log($"[Client] OnConnecting called - State: {info.State}");
+        FlaxEngine.Debug.Log($"[Client] OnConnecting called - Identity: {info.Identity}");
+        FlaxEngine.Debug.Log($"[Client] OnConnecting called - Address: {info.Address}");
+        base.OnConnecting(info);
+
+        //NetworkEvent?.Invoke(NetworkEventType., Driver.TargetSteamId, []);
+    }
+
     public override void OnConnected(ConnectionInfo info)
     {
+        FlaxEngine.Debug.Log($"[Client] OnConnected called - State: {info.State}");
+        FlaxEngine.Debug.Log($"[Client] OnConnected called - Identity: {info.Identity}");
+        FlaxEngine.Debug.Log($"[Client] OnConnected called - Address: {info.Address}");
         base.OnConnected(info);
 
         NetworkEvent?.Invoke(NetworkEventType.Connected, Driver.TargetSteamId, []);

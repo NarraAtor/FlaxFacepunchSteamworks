@@ -1,12 +1,13 @@
 ﻿#if !EXCLUDE_STEAMWORKS
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using FlaxEngine;
 using FlaxEngine.Networking;
 using Steamworks;
 using Steamworks.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Debug = FlaxEngine.Debug;
 
 namespace FacepunchSteamworks;
@@ -49,8 +50,6 @@ public class FacepunchNetworkDriver : FlaxEngine.Object, INetworkDriver
 
         SteamNetworkingUtils.SendBufferSize = config.MessageSize;
         ConnectedClients = new Dictionary<ulong, Client>();
-
-        SteamNetworkingUtils.InitRelayNetworkAccess();
 
         Scripting.Update += OnUpdate;
 
