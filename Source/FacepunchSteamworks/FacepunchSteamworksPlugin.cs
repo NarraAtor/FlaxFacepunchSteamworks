@@ -5,9 +5,6 @@ using FlaxEngine;
 using FlaxEngine.Networking;
 using Steamworks;
 using System;
-using System.ComponentModel;
-using System.Runtime;
-using SettingsBase = FlaxEngine.SettingsBase;
 
 namespace FacepunchSteamworks;
 
