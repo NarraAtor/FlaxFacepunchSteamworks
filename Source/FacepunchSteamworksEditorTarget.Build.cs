@@ -2,7 +2,7 @@
 
 public class FacepunchSteamworksEditorTarget : GameProjectEditorTarget
 {
-#if BUILD_RELEASE
+
     /// <inheritdoc />
     public override void Init()
     {
@@ -12,5 +12,4 @@ public class FacepunchSteamworksEditorTarget : GameProjectEditorTarget
         Modules.Add("FacepunchSteamworks");
         Modules.Add("FacepunchSteamworksEditor");
     }
-#endif
 }

@@ -5,7 +5,6 @@ using Flax.Build.NativeCpp;
 
 public class FacepunchSteamworks : GameModule
 {
-#if BUILD_RELEASE
     public override void Init()
     {
         base.Init();
@@ -43,6 +42,7 @@ public class FacepunchSteamworks : GameModule
             BuildNativeCode = true;
         }
 
+        
         Tags["Network"] = string.Empty;
         options.PublicDependencies.Add("Networking");
         options.ScriptingAPI.SystemReferences.Add("System.Runtime");
@@ -78,5 +78,4 @@ public class FacepunchSteamworks : GameModule
         }
         
     }
-#endif
 }

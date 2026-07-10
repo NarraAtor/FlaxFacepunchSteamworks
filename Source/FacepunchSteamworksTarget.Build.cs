@@ -2,12 +2,11 @@
 
 public class FacepunchSteamworksTarget : GameProjectTarget
 {
-#if BUILD_RELEASE
     /// <inheritdoc />
     public override void Init()
     {
         base.Init();
-        
+
         Platforms = new[]
         {
             TargetPlatform.Windows,
@@ -18,5 +17,4 @@ public class FacepunchSteamworksTarget : GameProjectTarget
         // Reference the modules for game
         Modules.Add("FacepunchSteamworks");
     }
-#endif
 }
