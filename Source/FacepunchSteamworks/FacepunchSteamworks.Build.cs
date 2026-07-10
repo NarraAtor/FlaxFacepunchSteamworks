@@ -5,6 +5,7 @@ using Flax.Build.NativeCpp;
 
 public class FacepunchSteamworks : GameModule
 {
+#if BUILD_RELEASE
     public override void Init()
     {
         base.Init();
@@ -77,4 +78,5 @@ public class FacepunchSteamworks : GameModule
         }
         
     }
+#endif
 }

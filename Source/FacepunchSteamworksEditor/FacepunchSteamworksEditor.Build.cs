@@ -3,6 +3,7 @@ using Flax.Build.NativeCpp;
 
 public class FacepunchSteamworksEditor : GameEditorModule
 {
+#if BUILD_RELEASE
     /// <inheritdoc />
     public override void Setup(BuildOptions options)
     {
@@ -17,4 +18,5 @@ public class FacepunchSteamworksEditor : GameEditorModule
         // To learn more see scripting documentation.
         BuildNativeCode = false;
     }
+#endif
 }

@@ -2,6 +2,7 @@
 
 public class FacepunchSteamworksTarget : GameProjectTarget
 {
+#if BUILD_RELEASE
     /// <inheritdoc />
     public override void Init()
     {
@@ -17,4 +18,5 @@ public class FacepunchSteamworksTarget : GameProjectTarget
         // Reference the modules for game
         Modules.Add("FacepunchSteamworks");
     }
+#endif
 }
